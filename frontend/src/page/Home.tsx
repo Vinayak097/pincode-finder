@@ -89,7 +89,7 @@ export function Home() {
                         setSearchResult([res.data])
                         setError(null)
                         console.log('serach result ' ,searchResult )
-                    } else {
+                    } else {    
                         setError(res.error)
                         setSearchResult([])
                     }
@@ -115,7 +115,7 @@ export function Home() {
               searchResult.map((result:any, index) => (
                 <SearchResultCard
                   key={index}
-                  locationName={result.locationName}
+                  locationName={result.area}
                   pincode={result.pincode}
                 />
               ))

@@ -20,7 +20,7 @@ app.get('/pincode/:id',(req:Request , res:Response)=>{
     }
     const pincodeData  =  banglore.find((item:BangloreInterface) => item.pincode === pincodeId)
     if(!pincodeData){
-        res.status(404).json({success:false,error:"pincode not found"})
+        res.status(404).json({success:false,error:"this pincode is not exist in Banglore or not valid pincode"})
         return;
     }
     res.status(200).json({success:true,data:pincodeData})
@@ -30,12 +30,12 @@ app.get('/area/:name',(req:Request , res:Response)=>{
     console.log("req. recieved for araa")
     const areaName= req.params.name
     if(!areaName){
-        res.status(400).json({success:false,error:"area name is required"})
+        res.status(400).json({success:false,error:"this area name is required"})
         return;
     }
     const areaData = banglore.find((item:BangloreInterface) => item.area === areaName)
     if(!areaData){
-        res.status(404).json({success:false,error:"area not found"})
+        res.status(404).json({success:false,error:"this area is not exist in Banglore or not valid area name"})
         return;
     }
     res.status(200).json({success:true,data:areaData}   )
