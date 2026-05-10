@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Navbar } from "../components/Navbar";
-import { Copy, LocateIcon, Search } from "lucide-react";
+import {Search } from "lucide-react";
 import { SearchResultCard } from "../components/SearchResult";
 import {SearchQueryFun} from "../services/api.ts"
 

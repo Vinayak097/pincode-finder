@@ -1,4 +1,5 @@
-const backendurl="http://localhost:3000"
+const backendurl="https://pincode-finder.onrender.com"
+
 export async function SearchQueryFun(searchType:string,searchQuery:string){
    if (!searchQuery) {
     return "please enter a search query";
